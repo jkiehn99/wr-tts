@@ -1,0 +1,9 @@
+__pycache__/
+*.py[cod]
+jobs/
+uploads/
+*.mp3
+*.concat.txt
+settings.json
+.env
+.DS_Store

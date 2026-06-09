@@ -24,7 +24,7 @@ from fastapi.responses import FileResponse, HTMLResponse, JSONResponse, PlainTex
 APP_ROOT = Path(os.environ.get("BOOK_TTS_WEB_HOME", "/opt/data/apps/book-tts-web"))
 JOBS_DIR = APP_ROOT / "jobs"
 UPLOADS_DIR = APP_ROOT / "uploads"
-XIAOQIU_SCRIPT = Path(os.environ.get("XIAOQIU_TTS_SCRIPT", "/opt/data/scripts/libretts-edge.mjs"))
+XIAOQIU_SCRIPT = Path(os.environ.get("XIAOQIU_TTS_SCRIPT", str(APP_ROOT / "scripts" / "libretts-edge.mjs")))
 DEFAULT_VOICE = os.environ.get("XIAOQIU_TTS_VOICE", "zh-CN-XiaoqiuNeural")
 MAX_CHARS_PER_CHUNK = int(os.environ.get("BOOK_TTS_MAX_CHARS", "1800"))
 PREVIEW_TTL_SECONDS = int(os.environ.get("BOOK_TTS_PREVIEW_TTL_SECONDS", str(30 * 60)))

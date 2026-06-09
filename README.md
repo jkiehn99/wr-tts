@@ -29,6 +29,7 @@
 ```text
 app.py        # FastAPI 主程序，包含后端接口和前端页面
 run.sh        # 启动脚本
+scripts/      # 内置本地 TTS 后端脚本
 README.md     # 项目说明
 .gitignore    # Git 忽略规则
 jobs/         # 运行时任务目录，不提交 Git
@@ -43,8 +44,7 @@ settings.json # 本地 TTS 代理设置，不提交 Git
 - Linux / Docker 容器均可
 - Python 3.10+
 - `ffmpeg`
-- Node.js（用于本地小秋 TTS 脚本）
-- 可用的小秋 TTS 脚本：`/opt/data/scripts/libretts-edge.mjs`
+- Node.js（用于运行项目内置的 `scripts/libretts-edge.mjs`）
 
 Python 依赖主要包括：
 
@@ -220,7 +220,7 @@ API Key 保存在本地 `settings.json`，接口不会回显。不要把 `settin
 
 ```bash
 BOOK_TTS_WEB_HOME=/opt/data/apps/book-tts-web
-XIAOQIU_TTS_SCRIPT=/opt/data/scripts/libretts-edge.mjs
+XIAOQIU_TTS_SCRIPT=/opt/data/apps/book-tts-web/scripts/libretts-edge.mjs
 XIAOQIU_TTS_VOICE=zh-CN-XiaoqiuNeural
 BOOK_TTS_MAX_CHARS=1800
 BOOK_TTS_PREVIEW_TTL_SECONDS=1800
@@ -230,7 +230,7 @@ PORT=9120
 说明：
 
 - `BOOK_TTS_WEB_HOME`：项目运行目录。
-- `XIAOQIU_TTS_SCRIPT`：本地小秋 TTS 脚本路径。
+- `XIAOQIU_TTS_SCRIPT`：本地小秋 TTS 脚本路径；默认使用项目内置 `scripts/libretts-edge.mjs`，通常不用设置。
 - `XIAOQIU_TTS_VOICE`：默认音色。
 - `BOOK_TTS_MAX_CHARS`：默认每段字符数。
 - `BOOK_TTS_PREVIEW_TTL_SECONDS`：试听任务过期清理时间，默认 1800 秒。

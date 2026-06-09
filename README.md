@@ -1,4 +1,4 @@
-# 小秋有声书生成器（Book TTS Web）
+# 有声书生成器（Book TTS Web）
 
 一个轻量级的网页有声书生成工具，支持把长文本、电子书和文档转换为 MP3。项目默认使用 Microsoft 小秋音色 `zh-CN-XiaoqiuNeural`，适合中文小说、文章、课程资料、长文档的批量转语音。
 

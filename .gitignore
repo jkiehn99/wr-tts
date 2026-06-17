@@ -2,8 +2,11 @@ __pycache__/
 *.py[cod]
 jobs/
 uploads/
+runtime_uploads/
 *.mp3
 *.concat.txt
 settings.json
+runtime_settings.json
 .env
+*.log
 .DS_Store

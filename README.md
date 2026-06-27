@@ -31,8 +31,8 @@ run.sh        # 启动脚本
 scripts/      # 内置本地 TTS 后端脚本
 README.md     # 项目说明
 .gitignore    # Git 忽略规则
-jobs/         # 运行时任务目录，不提交 Git
-uploads/      # 上传文件目录，不提交 Git
+jobs/         # 运行时任务目录
+uploads/      # 上传文件目录
 settings.json # 本地 TTS 代理设置，不提交 Git
 ```
 
